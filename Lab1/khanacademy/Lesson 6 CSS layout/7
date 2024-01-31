@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Invitation</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header {
+      background-color: #f2a154;
+      color: #fff;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 20px 0;
+    }
+
+    .footer {
+      background-color: #f2a154;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .details-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .details-list li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      Happy Birthday!
+    </div>
+    <div class="content">
+      <ul class="details-list">
+        <li>Join us in celebrating [Friend's Name]'s birthday!</li>
+        <li>Date: [Date]</li>
+        <li>Time: [Time]</li>
+        <li>Location: [Location]</li>
+      </ul>
+    </div>
+    <div class="footer">
+      <ul class="details-list">
+        <li>RSVP by [RSVP Date]</li>
+        <li>Contact: [Your Contact Information]</li>
+        <li><a href="#">Visit our website</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
