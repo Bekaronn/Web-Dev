@@ -1,7 +1,15 @@
 <article>
-  <h2>{{product?.name}}</h2>
-  <div *ngFor="let x of product?.photo">
-    <img [src]="x" [alt]="product?.name + ' фото'">
+  <h1>{{product?.name}}</h1>
+  <div class="galleries">
+    <img *ngFor="let x of product?.photo" [src]="x" [alt]="product?.name + ' фото'">
+  </div>
+  <div class="info">
+    <p>Цена {{product?.price}}₸</p>
+    <p>Рейтинг товара {{product?.rating}}/10</p>
+  </div>
+  <div>
+    <h2>Описание</h2>
+    <p>{{product?.description}}</p>
   </div>
 </article>
 

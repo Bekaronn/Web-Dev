@@ -1,0 +1,23 @@
+.products-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px 100px;
+}
+
+article {
+  display: flex;
+  width: 23%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article img {
+  width: 350px;
+}
+
+.learn-more {
+  margin-left: 10px;
+}
+

@@ -1,16 +1,28 @@
+<section class="products-list">
 <article *ngFor="let product of products">
   <h3>
-    <a [title]="product.name + 'details'">
+    <a [title]="product.name + 'details'" >
       {{product.name}}
     </a>
   </h3>
   <img [src]="product.photo.at(0)" [alt]="product.name + ' фото'">
-  <p>{{product.price}}</p>
-  <section>
-    <p>Рейтинг товара {{product.rating}}/10</p>
-  </section>
-  <button type="button" (click)="share()">
-    Share
-  </button>
-  <a [routerLink]="['/details', product.id]">Learn More</a>
+  <div>
+    <p>Цена {{product.price}}₸</p>
+    <section>
+      <p>Рейтинг товара {{product.rating}}/10</p>
+    </section>
+    <button type="button" (click)="share()">
+      Share
+    </button>
+    <a [routerLink]="['/details', product.id]" class="learn-more">Learn More</a>
+
+<!--    <button type="button" (click)="shareOnWhatsApp(product.link)">-->
+<!--      Share WhatsApp-->
+<!--    </button>-->
+
+<!--    <button type="button" (click)="shareOnTelegram(product.link)">-->
+<!--      Share Telegram-->
+<!--    </button>-->
+  </div>
 </article>
+</section>
