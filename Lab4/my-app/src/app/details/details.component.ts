@@ -19,4 +19,14 @@ export class DetailsComponent {
     const productId = Number(this.route.snapshot.params['id']);
     this.product = products.at(productId - 1);
   }
+
+  shareOnWhatsApp(): void {
+    const encodedLink = encodeURIComponent("http://localhost:4200/details/"+this.product?.id);
+    window.open(`https://wa.me/?text=${encodedLink}`, '_blank');
+  }
+
+  shareOnTelegram(): void {
+    const encodedLink = encodeURIComponent("http://localhost:4200/details/"+this.product?.id);
+    window.open(`https://t.me/share/url?url=${encodedLink}`, '_blank');
+  }
 }

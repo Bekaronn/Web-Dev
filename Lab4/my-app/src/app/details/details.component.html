@@ -6,26 +6,15 @@
   <div class="info">
     <p>Цена {{product?.price}}₸</p>
     <p>Рейтинг товара {{product?.rating}}/10</p>
+    <button type="button" (click)="shareOnWhatsApp()">
+      Share WhatsApp
+    </button>
+    <button type="button" (click)="shareOnTelegram()">
+      Share Telegram
+    </button>
   </div>
   <div>
     <h2>Описание</h2>
     <p>{{product?.description}}</p>
   </div>
 </article>
-
-<!--<article *ngFor="let product of products">-->
-<!--  <h3>-->
-<!--    <a [title]="product.name + 'details'">-->
-<!--      {{product.name}}-->
-<!--    </a>-->
-<!--  </h3>-->
-<!--  <img [src]="product.photo.at(0)" [alt]="product.name + ' фото'">-->
-<!--  <p>{{product.price}}</p>-->
-<!--  <section>-->
-<!--    <p>Рейтинг товара {{product.rating}}/10</p>-->
-<!--  </section>-->
-<!--  <button type="button" (click)="share()">-->
-<!--    Share-->
-<!--  </button>-->
-<!--  <a [routerLink]="['/details', product.id]">Learn More</a>-->
-<!--</article>-->
