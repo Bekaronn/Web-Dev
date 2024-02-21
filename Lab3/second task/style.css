@@ -68,7 +68,7 @@ input[type="checkbox"] {
     margin-right: 10px;
 }
 
-.checked{
+.checked p{
     text-decoration: line-through;
 }
 
@@ -76,8 +76,4 @@ span {
     margin-left: auto;
     cursor: pointer;
     color: red;
-}
-
-span {
-    text-decoration: none;
 }

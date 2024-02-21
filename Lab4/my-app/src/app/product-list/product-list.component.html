@@ -1,0 +1,16 @@
+<article *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + 'details'">
+      {{product.name}}
+    </a>
+  </h3>
+  <img [src]="product.photo.at(0)" [alt]="product.name + ' фото'">
+  <p>{{product.price}}</p>
+  <section>
+    <p>Рейтинг товара {{product.rating}}/10</p>
+  </section>
+  <button type="button" (click)="share()">
+    Share
+  </button>
+  <a [routerLink]="['/details', product.id]">Learn More</a>
+</article>

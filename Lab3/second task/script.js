@@ -8,13 +8,15 @@ function addTask() {
         return;
     } 
     var li = document.createElement("li");
+    var paragraph = document.createElement("p");
 
     var checkbox = document.createElement("input");
     checkbox.type = "checkbox";
 
     var taskText = document.createTextNode(task);
     li.appendChild(checkbox);
-    li.appendChild(taskText);
+    paragraph.appendChild(taskText);
+    li.appendChild(paragraph);
 
     var span = document.createElement("span");
     span.innerHTML = "&times;";
