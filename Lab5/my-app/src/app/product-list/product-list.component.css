@@ -1,0 +1,12 @@
+.products-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px 100px;
+}
+
+app-product-item {
+  width: 23%;
+}
+
