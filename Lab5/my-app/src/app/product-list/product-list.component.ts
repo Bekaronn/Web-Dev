@@ -18,17 +18,31 @@ import {AppComponent} from "../app/app.component";
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-  products = [...products];
+  allAvailableProduct: Product[] = [...products];
+  products: Product[] = [...products];
   selectedCategory: string = 'all';
 
   onCategorySelected(category: string) {
     console.log('Selected category:', category);
+    if(category == 'all'){
+      this.products = this.allAvailableProduct
+    } else {
+      this.products = []
+      for(let i = 0; i < this.allAvailableProduct.length; i++){
+        if(this.allAvailableProduct[i].category == category){
+          this.products.push(this.allAvailableProduct[i])
+        }
+      }
+    }
+
     this.selectedCategory = category
   }
 
   removeById(id: string){
-    const index = this.products.findIndex(product => product.id.toString() === id.toString());
+    let index = this.products.findIndex(product => product.id.toString() === id.toString());
     this.products.splice(Number(index), 1);
+    index = this.allAvailableProduct.findIndex(product => product.id.toString() === id.toString());
+    this.allAvailableProduct.splice(Number(index), 1);
     console.log(Number(id) - 1)
   }
 
