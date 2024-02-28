@@ -22,7 +22,12 @@ article img {
   margin-left: 10px;
 }
 
-/*.header-article {*/
-/*  !*display: grid;*!*/
-/*  !*grid-template-columns: 80% 20%;*!*/
-/*}*/
+.header-article {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-article span {
+  padding-right: 20px;
+  padding-top: 20px;
+}
