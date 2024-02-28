@@ -2,7 +2,7 @@ import { Component} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {RouterLink} from "@angular/router";
 import {ProductItemComponent} from "../product-item/product-item.component";
-import {products} from "../products";
+import {Product, products} from "../products";
 import {AppComponent} from "../app/app.component";
 
 @Component({
@@ -18,11 +18,16 @@ import {AppComponent} from "../app/app.component";
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-  products= [...products];
+  products = [...products];
   selectedCategory: string;
 
   onCategorySelected(category: string) {
     console.log('Selected category:', category);
     this.selectedCategory = category
+  }
+
+  isCategorySuitable(product: Product): boolean {
+    let bool= product.category == this.selectedCategory;
+    return bool;
   }
 }

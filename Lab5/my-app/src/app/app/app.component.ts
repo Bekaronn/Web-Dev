@@ -10,7 +10,6 @@ import {EventEmitter} from "@angular/core";
 })
 export class AppComponent {
   @Output() categorySelected = new EventEmitter<string>();
-  categories = ["iphone","phone"]
 
   selectCategory(category: string) {
     this.categorySelected.emit(category);
