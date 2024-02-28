@@ -19,15 +19,26 @@ import {AppComponent} from "../app/app.component";
 })
 export class ProductListComponent {
   products = [...products];
-  selectedCategory: string;
+  selectedCategory: string = 'all';
 
   onCategorySelected(category: string) {
     console.log('Selected category:', category);
     this.selectedCategory = category
   }
 
+  removeById(id: string){
+    this.products[Number(id) - 1].category = 'removed'
+    console.log(Number(id) - 1)
+  }
+
   isCategorySuitable(product: Product): boolean {
-    let bool= product.category == this.selectedCategory;
+    if(product.category == 'removed'){
+      return false
+    }
+    if(this.selectedCategory == 'all'){
+      return true
+    }
+    let bool = this.selectedCategory == product.category;
     return bool;
   }
 }

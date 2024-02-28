@@ -29,4 +29,6 @@ export class DetailsComponent {
     const encodedLink = encodeURIComponent("http://localhost:4200/details/"+this.product?.id);
     window.open(`https://t.me/share/url?url=${encodedLink}`, '_blank');
   }
+
+
 }

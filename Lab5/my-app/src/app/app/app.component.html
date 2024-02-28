@@ -1,8 +1,9 @@
 <nav>
   <ol>
-    <li><a (click)="selectCategory('phone')">Smartphone</a></li>
-    <li><a (click)="selectCategory('laptop')">Laptop</a></li>
-    <li><a (click)="selectCategory('accessories')">Accessories</a></li>
-    <li><a (click)="selectCategory('watch')">Watch</a></li>
+    <li (click)="selectCategory('all')">All</li>
+    <li (click)="selectCategory('phone')">Smartphone</li>
+    <li (click)="selectCategory('laptop')">Laptop</li>
+    <li (click)="selectCategory('accessories')">Accessories</li>
+    <li (click)="selectCategory('watch')">Watch</li>
   </ol>
 </nav>

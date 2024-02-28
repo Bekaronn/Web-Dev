@@ -1,15 +1,28 @@
 article {
   display: flex;
-  width: 100%;
   flex-direction: column;
   justify-content: space-between;
+  height: 700px;
 }
 
 article img {
-  width: 350px;
+  width: 300px;
+}
+
+.like {
+  width: 1.25em;
+}
+
+.liked {
+  width: 1.25em;
+  fill: red;
 }
 
 .learn-more {
   margin-left: 10px;
 }
 
+/*.header-article {*/
+/*  !*display: grid;*!*/
+/*  !*grid-template-columns: 80% 20%;*!*/
+/*}*/
