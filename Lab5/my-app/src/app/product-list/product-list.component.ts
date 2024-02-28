@@ -27,14 +27,12 @@ export class ProductListComponent {
   }
 
   removeById(id: string){
-    this.products[Number(id) - 1].category = 'removed'
+    const index = this.products.findIndex(product => product.id.toString() === id.toString());
+    this.products.splice(Number(index), 1);
     console.log(Number(id) - 1)
   }
 
   isCategorySuitable(product: Product): boolean {
-    if(product.category == 'removed'){
-      return false
-    }
     if(this.selectedCategory == 'all'){
       return true
     }

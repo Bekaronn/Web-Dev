@@ -1,6 +1,8 @@
 <app-app (categorySelected)="onCategorySelected($event)"></app-app>
 <section class="products-list">
   <div *ngFor="let product of products" >
-    <app-product-item *ngIf="isCategorySuitable(product)" [product]="product" (remove)="removeById($event)"></app-product-item>
+    <app-product-item *ngIf="isCategorySuitable(product)"
+                      [product]="product" (remove)="removeById($event)">
+    </app-product-item>
   </div>
 </section>
