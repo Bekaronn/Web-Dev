@@ -1,0 +1,12 @@
+<div>
+  <h2>Album Detail</h2>
+  <div>
+    <p><strong>Title:</strong> {{ album.title }}</p>
+    <input type="text" [(ngModel)]="titleToChange" placeholder="Enter new title">
+    <button (click)="saveTitle()">Save</button>
+  </div>
+  <div>
+    <a [routerLink] ="['/albums', album.id, 'photos']">photos</a>
+    <button [routerLink]="['/albums']">Return back</button>
+  </div>
+</div>
