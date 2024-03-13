@@ -1,0 +1,17 @@
+div {
+  padding: 10px;
+}
+
+span {
+  padding-left: 20px;
+  padding-right: 6px;
+}
+
+a:link, a:visited {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: coral;
+}

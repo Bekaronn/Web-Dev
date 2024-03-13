@@ -1,4 +1,4 @@
 <div *ngFor="let album of albums">
-  <a [routerLink]="['/albums', album.id]">{{album.title}}</a>
   <span (click)="removeById(album.id)">X</span>
+  <a [routerLink]="['/albums', album.id]">{{album.title}}</a>
 </div>
