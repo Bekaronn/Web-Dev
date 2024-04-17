@@ -1,0 +1,10 @@
+.company {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 20px;
+}
+
+.company:hover {
+  background-color: cornflowerblue;
+  font-weight: bolder;
+}
